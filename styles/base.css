@@ -1,0 +1,357 @@
+
+/* =========================================
+   1. GLOBAL STYLES
+   Apply consistent sizing and spacing.
+   ========================================= */
+
+/* Include padding and borders inside element widths. */
+* {
+    box-sizing: border-box;
+}
+
+/* Set the default appearance of the whole page. */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #252525;
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Remove excessive default spacing around headings. */
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+}
+
+/* Use Montserrat for headings to create a clear visual hierarchy. */
+h1,
+h2,
+h3 {
+    font-family: "Montserrat", Arial, sans-serif;
+}
+
+
+/* =========================================
+   2. HEADER AND COURSE TITLE
+   ========================================= */
+
+/* Style the top course-title section. */
+header {
+    background-color: #214f73;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Display the course title on its own line. */
+#course-title {
+    display: block;
+    padding: 12px 16px;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   3. NAVIGATION
+   Flexbox arranges links horizontally.
+   ========================================= */
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+    background-color: #303030;
+}
+
+/* Style each navigation link. */
+nav a {
+    flex: 1 1 120px;
+    padding: 10px 12px;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease;
+}
+
+/* Change the link appearance when a pointer hovers over it. */
+nav a:hover {
+    background-color: #ffffff;
+    color: #214f73;
+}
+
+/* Make keyboard navigation visible. */
+nav a:focus-visible,
+a:focus-visible {
+    outline: 3px solid #d6ad45;
+    outline-offset: 3px;
+}
+
+
+/* =========================================
+   4. MAIN CONTENT
+   Center the page and limit its width.
+   ========================================= */
+
+main {
+    width: min(100% - 32px, 1100px);
+    margin: 24px auto 18px;
+}
+
+/* Center the student's name above the cards. */
+h1 {
+    margin-bottom: 18px;
+    color: #252525;
+    text-align: center;
+    font-size: clamp(1.6rem, 3vw, 2rem);
+    font-weight: 600;
+}
+
+
+/* =========================================
+   5. CARD LAYOUT
+   CSS Grid creates two main columns.
+   ========================================= */
+
+.card-container {
+    display: grid;
+
+    /* The first card is wider than the resource card. */
+    grid-template-columns: 2fr 1fr;
+
+    gap: 18px;
+    align-items: stretch;
+}
+
+/* Common styles shared by both cards. */
+.card {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid #c9c9c9;
+    border-radius: 9px;
+    background-color: #ffffff;
+}
+
+/* Style the heading at the top of each card. */
+.card h2 {
+    margin: 0;
+    padding: 11px 14px;
+    background-color: #214f73;
+    color: #ffffff;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+/* Give card content comfortable spacing. */
+.card > p,
+.card > ul,
+.card > .about-content,
+.card > .country-content,
+.card > h3 {
+    margin-right: 16px;
+    margin-left: 16px;
+}
+
+
+/* =========================================
+   6. ABOUT ME CARD
+   Arrange the introduction and photo.
+   ========================================= */
+
+.about-content {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 150px;
+    gap: 18px;
+    align-items: start;
+    padding-top: 16px;
+}
+
+/* Improve paragraph readability. */
+.introduction p {
+    margin-bottom: 18px;
+    font-size: 0.95rem;
+}
+
+/* Keep the profile photograph within its column. */
+.profile-image {
+    display: block;
+    width: 100%;
+    max-width: 150px;
+    height: 180px;
+    object-fit: cover;
+    border: 1px solid #dddddd;
+}
+
+/* Center the country heading. */
+.about-card h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+/* Display the flag and country description side by side. */
+.country-content {
+    display: grid;
+    grid-template-columns: minmax(100px, 150px) minmax(0, 1fr);
+    gap: 18px;
+    align-items: start;
+    padding-bottom: 12px;
+}
+
+/* Remove default figure margins that interfere with alignment. */
+.country-content figure {
+    margin: 0;
+    text-align: center;
+}
+
+/* Make the flag responsive. */
+.country-flag {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid #dddddd;
+}
+
+/* Style the flag caption. */
+.country-content figcaption {
+    margin-top: 6px;
+    font-size: 0.75rem;
+    font-style: italic;
+}
+
+/* Style the country description. */
+.country-content p {
+    margin-bottom: 0;
+    font-size: 0.92rem;
+}
+
+
+/* =========================================
+   7. WEB DEVELOPMENT RESOURCES CARD
+   ========================================= */
+
+.resources-card ul {
+    margin-top: 60px;
+    margin-bottom: 20px;
+    padding-left: 24px;
+}
+
+/* Keep resource links easy to identify. */
+.resources-card a {
+    color: #0645ad;
+    overflow-wrap: anywhere;
+    text-decoration: underline;
+}
+
+/* Provide a clear hover effect on resource links. */
+.resources-card a:hover {
+    color: #214f73;
+    text-decoration-thickness: 2px;
+}
+
+
+/* =========================================
+   8. FOOTER
+   Display copyright and modification date.
+   ========================================= */
+
+footer {
+    margin-top: 18px;
+    padding: 14px 12px;
+    background-color: #214f73;
+    color: #ffffff;
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+/* Space the two footer paragraphs consistently. */
+footer p {
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+/* Add a little space around the separator. */
+.footer-separator {
+    padding: 0 5px;
+}
+
+/* Highlight the automatically generated modification text. */
+#lastModified {
+    margin-top: 3px;
+    color: #fff2a6;
+    font-size: 0.75rem;
+}
+
+
+/* =========================================
+   9. RESPONSIVE DESIGN
+   Adapt the cards for smaller screens.
+   ========================================= */
+
+/* Stack the cards on tablets and mobile devices. */
+@media (max-width: 700px) {
+    main {
+        width: min(100% - 24px, 560px);
+        margin-top: 20px;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .resources-card ul {
+        margin-top: 24px;
+    }
+}
+
+/* Make the about section more compact on narrow phones. */
+@media (max-width: 420px) {
+    #course-title {
+        font-size: 0.95rem;
+    }
+
+    nav a {
+        flex-basis: 50%;
+        font-size: 0.85rem;
+    }
+
+    .about-content {
+        grid-template-columns: minmax(0, 1fr) 110px;
+        gap: 12px;
+    }
+
+    .profile-image {
+        max-width: 110px;
+        height: 140px;
+    }
+
+    .country-content {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .country-content figure {
+        max-width: 180px;
+        margin: 0 auto;
+    }
+}
+
+/* Respect the visitor's reduced-motion preference. */
+@media (prefers-reduced-motion: reduce) {
+    nav a {
+        transition: none;
+    }
+}

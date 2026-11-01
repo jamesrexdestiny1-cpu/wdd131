@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Defines the character encoding used by the document. -->
+    <meta charset="UTF-8">
+
+    <!-- Makes the page responsive on mobile phones and other devices. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Describes the page for search engines. -->
+    <meta name="description"
+          content="WDD 131 – Dynamic Web Fundamentals. James Rex Ovie shares information about his background, interests, Nigeria, and useful web development resources.">
+
+    <!-- Identifies the author of this webpage. -->
+    <meta name="author" content="James Rex Ovie">
+
+    <!-- Sets the browser tab title. -->
+    <title>WDD 131 – Dynamic Web Fundamentals – James Rex Ovie</title>
+
+    <!-- Preconnects to Google Fonts to improve font loading performance. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Loads the selected fonts from Google Fonts. -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Links the external stylesheet that controls the page appearance. -->
+    <link rel="stylesheet" href="styles/base.css">
+
+    <!-- Loads the JavaScript after HTML parsing without blocking it. -->
+    <script src="scripts/getdates.js" defer></script>
+</head>
+
+<body>
+    <!-- The header contains the course title and site navigation. -->
+    <header>
+        <!-- The span is displayed as a block by CSS. -->
+        <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+
+        <!-- Navigation links use Flexbox for horizontal alignment. -->
+        <nav aria-label="Main navigation">
+            <!-- General LinkedIn link until a personal profile is available. -->
+            <a href="https://www.linkedin.com/"
+               target="_blank"
+               rel="noopener noreferrer">LinkedIn</a>
+
+            <!-- Link to the BYU-Pathway learning platform. -->
+            <a href="https://byupw.instructure.com/"
+               target="_blank"
+               rel="noopener noreferrer">I-Learn</a>
+
+            <!-- Link to the official online scriptures library. -->
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/nt/heb/1?lang=eng"
+               target="_blank"
+               rel="noopener noreferrer">Scripture</a>
+
+            <!-- Placeholder link for the final course project. -->
+            <a href="final-project/">Final Project</a>
+        </nav>
+    </header>
+
+    <!-- Main contains the page heading and the two information cards. -->
+    <main>
+        <!-- My name serves as the main heading of the page. -->
+        <h1>James Rex Ovie</h1>
+
+        <!-- CSS Grid positions the two cards beside each other. -->
+        <div class="card-container">
+
+            <!-- First card: personal introduction and background. -->
+            <section class="card about-card">
+                <h2>About Me</h2>
+
+                <div class="about-content">
+                    <!-- Introductory text and a local profile photograph. -->
+                    <div class="introduction">
+                        <p>
+                            My name is James Rex Ovie. I am a Computer
+                            Science student with an interest in web
+                            development, programming, and technology.
+                            I enjoy learning new skills, solving
+                            problems, and building useful digital
+                            solutions. My goal is to continue growing
+                            as a developer and use technology to make
+                            a positive impact.
+                        </p>
+                    </div>
+
+                    <!-- My own optimized photo. -->
+                    <img
+                        class="profile-image"
+                        src="images/james_rex_ovie.jpg"
+                        alt="Portrait of James Rex Ovie"
+                        width="150"
+                        height="180"
+                    >
+                </div>
+
+                <!-- A subsection about the my country. -->
+                <h3>Nigeria</h3>
+
+                <div class="country-content">
+                    <!-- Used a locally stored image of the Nigerian flag. -->
+                    <figure>
+                        <img
+                            class="country-flag"
+                            src="images/nigeria_flag.jpg"
+                            alt="Flag of Nigeria"
+                            width="150"
+                            height="100"
+                            loading="lazy"
+                        >
+                        <figcaption>Official Flag of Nigeria</figcaption>
+                    </figure>
+
+                    <p>
+                        Nigeria is a country in West Africa known for
+                        its cultural diversity, vibrant communities,
+                        natural resources, and entrepreneurial spirit.
+                        It has a rich history and a growing technology
+                        sector, with opportunities in software
+                        development, financial technology, and
+                        digital innovation.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Second card: useful web development learning resources. -->
+            <section class="card resources-card">
+                <h2>Web Dev Resources</h2>
+
+                <!-- A list makes the resources easy to scan and use. -->
+                <ul>
+                    <li>
+                        <a href="https://dev.to/"
+                           target="_blank"
+                           rel="noopener noreferrer">DEV Community</a>
+                    </li>
+                    <li>
+                        <a href="https://www.smashingmagazine.com/"
+                           target="_blank"
+                           rel="noopener noreferrer">Smashing Magazine</a>
+                    </li>
+                    <li>
+                        <a href="https://css-tricks.com/"
+                           target="_blank"
+                           rel="noopener noreferrer">CSS-Tricks</a>
+                    </li>
+                    <li>
+                        <a href="https://www.w3schools.com/"
+                           target="_blank"
+                           rel="noopener noreferrer">W3Schools</a>
+                    </li>
+                    <li>
+                        <a href="https://www.udemy.com/"
+                           target="_blank"
+                           rel="noopener noreferrer">Udemy</a>
+                    </li>
+                    <li>
+                        <a href="https://picsum.photos/"
+                           target="_blank"
+                           rel="noopener noreferrer">Lorem Picsum Image Placeholder</a>
+                    </li>
+                </ul>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- The footer contains copyright and automatic modification details. -->
+    <footer>
+        <p>
+            &copy;<span id="currentyear"></span>
+            James Rex Ovie
+            <span class="footer-separator">|</span>
+            Nigeria
+        </p>
+
+        <!-- JavaScript inserts the document's last-modified date here. -->
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
