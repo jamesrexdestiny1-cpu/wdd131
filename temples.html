@@ -1,0 +1,219 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Defines the character encoding for the webpage. -->
+    <meta charset="UTF-8">
+
+    <!-- Ensures the webpage adjusts to different screen sizes. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Describes the content of the Temple Album page. -->
+    <meta name="description"
+          content="WDD 131 Picture Album by James Rex Ovie. Explore a collection of beautiful temples from different parts of the world.">
+
+    <!-- Identifies the author of the webpage. -->
+    <meta name="author" content="James Rex Ovie">
+
+    <!-- Sets the title displayed in the browser tab. -->
+    <title>Temple Album | WDD 131 | James Rex Ovie</title>
+
+    <!-- Connects to Google Fonts for improved typography. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Loads Montserrat and Roboto fonts. -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Main mobile-first stylesheet. -->
+    <link rel="stylesheet" href="styles/temples.css">
+
+    <!-- Additional styles for larger screens. -->
+    <link rel="stylesheet" href="styles/temples_large.css">
+
+    <!-- Loads the external JavaScript after HTML parsing. -->
+    <script src="scripts/temples.js" defer></script>
+</head>
+
+<body>
+
+    <!-- =====================================
+         HEADER AND NAVIGATION
+         ===================================== -->
+    <header>
+        <div class="header-content">
+
+            <!-- Website title and branding. -->
+            <span class="site-title">Temple Album</span>
+
+            <!-- Button for opening and closing the mobile menu. -->
+            <button
+                id="menu-button"
+                class="menu-button"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="navigation">
+
+                <!-- JavaScript changes this symbol when clicked. -->
+                <span id="menu-icon" aria-hidden="true">&#9776;</span>
+            </button>
+
+            <!-- Main navigation menu. -->
+            <nav id="navigation" class="navigation" aria-label="Main navigation">
+
+                <!-- Each link has a data-filter value used by JavaScript. -->
+                <a href="#" class="nav-link active" data-filter="all">Home</a>
+
+                <a href="#" class="nav-link" data-filter="old">Old</a>
+
+                <a href="#" class="nav-link" data-filter="new">New</a>
+
+                <a href="#" class="nav-link" data-filter="large">Large</a>
+
+                <a href="#" class="nav-link" data-filter="small">Small</a>
+
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- =====================================
+         MAIN CONTENT
+         ===================================== -->
+    <main>
+
+        <!-- Main heading of the picture album. -->
+        <h1>Home</h1>
+
+        <!--
+            JavaScript selects the individual figures
+            inside this gallery when a navigation
+            filter is clicked.
+        -->
+        <section class="temple-gallery" aria-label="Temple picture gallery">
+
+            <!-- Temple 1 -->
+            <figure class="temple-card" data-category="old large">
+                <img
+                    src="images/aba_nigeria_temple.jpg"
+                    alt="Aba Nigeria Temple"
+                    width="400"
+                    height="300"
+                    loading="lazy">
+                <figcaption>Aba Nigeria Temple</figcaption>
+            </figure>
+
+            <!-- Temple 2 -->
+            <figure class="temple-card" data-category="old small">
+                <img
+                    src="images/adelaide_australia_temple.jpg"
+                    alt="Adelaide Australia Temple"
+                    width="400"
+                    height="300"
+                    loading="lazy">
+                <figcaption>Adelaide Australia Temple</figcaption>
+            </figure>
+
+            <!-- Temple 3 -->
+            <figure class="temple-card" data-category="old large">
+                <img
+                    src="images/albuquerque_temple.jpg"
+                    alt="Albuquerque Temple"
+                    width="400"
+                    height="300"
+                    loading="lazy">
+                <figcaption>Albuquerque Temple</figcaption>
+            </figure>
+
+            <!-- Temple 4 -->
+            <figure class="temple-card" data-category="old large">
+                <img
+                    src="images/apia_samoa_temple.jpg"
+                    alt="Apia Samoa Temple"
+                    width="400"
+                    height="300"
+                    loading="lazy">
+                <figcaption>Apia Samoa Temple</figcaption>
+            </figure>
+
+            <!-- Temple 5 -->
+            <figure class="temple-card" data-category="old large">
+                <img
+                    src="images/temple_5.jpeg"
+                    alt="Arequipa Peru Temple"
+                    width="400"
+                    height="300"
+                    loading="lazy">
+                <figcaption>Arequipa Peru Temple</figcaption>
+            </figure>
+
+            <!-- Temple 6 -->
+            <figure class="temple-card" data-category="old small">
+                <img
+                    src="images/Barranquilla_Columblia_Temple.jpg"
+                    alt="Barranquilla Colombia Temple"
+                    width="400"
+                    height="300"
+                    loading="lazy">
+                <figcaption>Barranquilla Colombia Temple</figcaption>
+            </figure>
+
+            <!-- Temple 7 -->
+            <figure class="temple-card" data-category="new small">
+                <img
+                    src="images/temple_7.jpeg"
+                    alt="Baton Rouge Louisiana Temple"
+                    width="400"
+                    height="300"
+                    loading="lazy">
+                <figcaption>Baton Rouge Louisiana Temple</figcaption>
+            </figure>
+
+            <!-- Temple 8 -->
+            <figure class="temple-card" data-category="new small">
+                <img
+                    src="images/temple_8.jpeg"
+                    alt="Bentonville Arkansas Temple Exterior"
+                    width="400"
+                    height="300"
+                    loading="lazy">
+                <figcaption>Bentonville Arkansas Temple Exterior</figcaption>
+            </figure>
+
+            <!-- Temple 9 -->
+            <figure class="temple-card" data-category="new large">
+                <img
+                    src="images/Bentonville_Temple.jpg"
+                    alt="Bentonville Temple"
+                    width="400"
+                    height="300"
+                    loading="lazy">
+                <figcaption>Bentonville Temple</figcaption>
+            </figure>
+
+        </section>
+    </main>
+
+
+    <!-- =====================================
+         FOOTER
+         ===================================== -->
+    <footer>
+
+        <!-- Copyright information with a dynamic year. -->
+        <p>
+            &copy;<span id="currentyear"></span>
+            James Rex Ovie
+            <span class="footer-separator">|</span>
+            Nigeria
+        </p>
+
+        <!-- JavaScript inserts the last modification date. -->
+        <p id="lastModified"></p>
+
+    </footer>
+
+</body>
+</html>
