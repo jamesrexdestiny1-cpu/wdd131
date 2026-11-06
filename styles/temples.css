@@ -80,26 +80,35 @@ header {
 }
 
 
+
 /* =========================================
    4. NAVIGATION MENU
    ========================================= */
 
-/* Hide the navigation menu by default on mobile. */
-.navigation {
-    display: none;
+/* Apply Flexbox directly to the nav element. */
+nav {
+    display: flex;
     flex-direction: column;
+    align-items: center;
     width: 100%;
+}
+
+/* Hide the navigation menu by default on mobile. */
+nav.navigation {
+    display: none;
     margin-top: 12px;
 }
 
 /* JavaScript adds the open class when clicked. */
-.navigation.open {
+nav.navigation.open {
     display: flex;
+    flex-direction: column;
 }
 
 /* Style the individual navigation links. */
 .navigation a {
     display: block;
+    width: 100%;
     padding: 12px;
     color: #ffffff;
     text-align: center;
