@@ -38,9 +38,9 @@
     .menu-button {
         display: none;
     }
-
-    /* Display the navigation links horizontally. */
-    .navigation {
+  
+    /* Display the navigation links horizontally on larger screens. */
+    nav.navigation {
         display: flex;
         flex-direction: row;
         justify-content: flex-end;

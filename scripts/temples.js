@@ -104,6 +104,7 @@ navLinks.forEach((link) => {
 });
 
 
+
 // =========================================
 // 4. CLOSE MENU WITH ESCAPE KEY
 // =========================================
@@ -111,13 +112,15 @@ navLinks.forEach((link) => {
 // Listen for keyboard input.
 document.addEventListener("keydown", (event) => {
 
-    // Close the navigation when Escape is pressed.
-    if (event.key === "Escape") {
+    // Close the navigation only if it is currently open.
+    if (event.key === "Escape" && navigation.classList.contains("open")) {
 
         navigation.classList.remove("open");
 
+        // Restore the hamburger icon.
         menuIcon.textContent = "☰";
 
+        // Reset the button's accessibility attributes.
         menuButton.setAttribute("aria-expanded", "false");
         menuButton.setAttribute("aria-label", "Open navigation menu");
     }
