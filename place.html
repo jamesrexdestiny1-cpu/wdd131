@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Define the character encoding for the webpage. -->
+    <meta charset="UTF-8">
+
+    <!-- Make the page responsive on mobile devices. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Describe the page for search engines. -->
+    <meta name="description" content="Discover Nigeria, its culture, landmarks, geography, and weather.">
+
+    <!-- Identify the author of the webpage. -->
+    <meta name="author" content="James Rex Ovie">
+
+    <!-- Set the browser tab title. -->
+    <title>Nigeria | Country Profile</title>
+
+    <!-- Connect to Google Fonts to load the Montserrat typeface. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Import the font weights used throughout the webpage. -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Link the mobile-first stylesheet. -->
+    <link rel="stylesheet" href="styles/place.css">
+
+    <!-- Link the stylesheet for wider screens. -->
+    <link rel="stylesheet" href="styles/place-large.css">
+
+    <!-- Load JavaScript after the HTML has been parsed. -->
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Main page header containing the country name. -->
+    <header class="site-header">
+        <h1>Nigeria</h1>
+    </header>
+
+    <!-- Main content area of the country page. -->
+    <main>
+
+        <!-- Hero section displaying a responsive photograph of Nigeria. -->
+        <section class="hero" aria-label="Nigeria landscape">
+
+            <!-- The picture element selects an image based on screen width. -->
+            <picture>
+
+                <!-- Display the smaller WebP image on screens up to 600px wide. -->
+                <source
+                    srcset="images/nigeria-small.webp"
+                    media="(max-width: 600px)">
+
+                <!-- Display the wider WebP image on screens from 601px upward. -->
+                <source
+                    srcset="images/nigeria-large.webp"
+                    media="(min-width: 601px)">
+
+                <!-- Fallback image and alternative text for accessibility. -->
+                <img
+                    src="images/nigeria-large.webp"
+                    alt="A scenic view representing the natural beauty of Nigeria"
+                    width="1200"
+                    height="650">
+            </picture>
+        </section>
+
+        <!-- Country information section. -->
+        <section class="country-data">
+
+            <!-- Heading for the country information. -->
+            <h2>Data</h2>
+
+            <!-- Description list containing facts about Nigeria. -->
+            <dl>
+
+                <dt>Area:</dt>
+                <dd>923,768 km²</dd>
+
+                <dt>Population:</dt>
+                <dd>Over 230 million</dd>
+
+                <dt>Capital:</dt>
+                <dd>Abuja</dd>
+
+                <dt>Languages:</dt>
+                <dd>English, Hausa, Yoruba, Igbo and others</dd>
+
+                <dt>Currency:</dt>
+                <dd>Nigerian Naira (₦)</dd>
+
+                <dt>Government:</dt>
+                <dd>Federal Republic</dd>
+
+                <dt>Continent:</dt>
+                <dd>Africa</dd>
+
+                <dt>Calling Code:</dt>
+                <dd>+234</dd>
+
+            </dl>
+        </section>
+
+        <!-- Weather information section. -->
+        <section class="weather">
+
+            <!-- The heading receives a weather emoticon through CSS on wider screens. -->
+            <h2>Weather</h2>
+
+            <!-- This SVG icon is displayed on mobile screens only. -->
+            <img
+                class="weather-icon"
+                src="images/weather.svg"
+                alt="Partly cloudy weather">
+
+            <!-- Static weather information used by the JavaScript. -->
+            <p><strong>Conditions:</strong> Partly Cloudy</p>
+
+            <p>
+                <strong>Temperature:</strong>
+                <span id="temperature">29</span> °C
+            </p>
+
+            <p>
+                <strong>Wind Speed:</strong>
+                <span id="wind-speed">12</span> km/h
+            </p>
+
+            <!-- JavaScript will display the wind chill or N/A here. -->
+            <p>
+                <strong>Wind Chill:</strong>
+                <span id="wind-chill">N/A</span>
+            </p>
+
+        </section>
+    </main>
+
+    <!-- Footer containing copyright and document information. -->
+    <footer>
+
+        <!-- JavaScript automatically inserts the current year. -->
+        <p>
+            &copy; <span id="current-year"></span> |
+            Nigeria Country Page | James Rex Ovie
+        </p>
+
+        <!-- JavaScript automatically inserts the last-modified date. -->
+        <p>
+            Last Modified: <span id="last-modified"></span>
+        </p>
+
+    </footer>
+
+</body>
+</html>
