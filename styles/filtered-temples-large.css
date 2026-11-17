@@ -1,0 +1,110 @@
+
+/* =========================================
+   LARGE SCREEN STYLES
+   ========================================= */
+
+@media screen and (min-width: 700px) {
+
+    /* Header layout. */
+    header {
+        padding: 12px 5%;
+    }
+
+    .header-content {
+        flex-wrap: nowrap;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    .site-title {
+        font-size: 1.35rem;
+        white-space: nowrap;
+    }
+
+    /* Hide the hamburger button on desktop. */
+    .menu-button {
+        display: none;
+    }
+
+    /* Show horizontal navigation links. */
+    nav.navigation {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        width: auto;
+        margin-top: 0;
+        margin-left: auto;
+        gap: 8px;
+    }
+
+    .navigation a {
+        width: auto;
+        padding: 10px 14px;
+        border: none;
+        border-radius: 3px;
+        font-size: 0.9rem;
+    }
+
+    /* Main content. */
+    main {
+        width: min(100% - 48px, 1100px);
+        margin-top: 28px;
+        margin-bottom: 32px;
+    }
+
+    h1 {
+        font-size: 1.7rem;
+        margin-bottom: 8px;
+    }
+
+    /* Two-column tablet layout. */
+    .temple-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 26px;
+        align-items: stretch;
+    }
+
+    .temple-card {
+        max-width: none;
+        padding: 18px;
+    }
+
+    .temple-card img {
+        height: 190px;
+    }
+
+    .temple-card h2 {
+        font-size: 1.15rem;
+    }
+
+    footer {
+        padding: 15px;
+    }
+}
+
+
+/* =========================================
+   EXTRA LARGE SCREENS
+   ========================================= */
+
+@media screen and (min-width: 1000px) {
+
+    main {
+        width: min(100% - 60px, 1200px);
+    }
+
+    /* Three-column desktop layout. */
+    .temple-gallery {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 28px 24px;
+    }
+
+    .temple-card {
+        padding: 20px;
+    }
+
+    .temple-card img {
+        height: 210px;
+    }
+}

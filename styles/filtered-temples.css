@@ -1,0 +1,261 @@
+
+/* =========================================
+   1. GLOBAL SETTINGS
+   ========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #252525;
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+h1,
+h2,
+.site-title {
+    font-family: "Montserrat", Arial, sans-serif;
+}
+
+
+/* =========================================
+   2. HEADER
+   ========================================= */
+
+header {
+    background-color: #3b0866;
+    color: #ffffff;
+    padding: 12px 16px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   3. HAMBURGER BUTTON
+   ========================================= */
+
+.menu-button {
+    display: block;
+    padding: 3px 8px;
+    border: none;
+    background: transparent;
+    color: #ffffff;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.menu-button:hover {
+    color: #e9c8ff;
+}
+
+.menu-button:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 4px;
+}
+
+
+/* =========================================
+   4. NAVIGATION
+   ========================================= */
+
+/* Apply Flexbox directly to the nav element. */
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Hide the menu initially on small screens. */
+nav.navigation {
+    display: none;
+    margin-top: 12px;
+}
+
+/* Display the menu when JavaScript adds open. */
+nav.navigation.open {
+    display: flex;
+    flex-direction: column;
+}
+
+.navigation a {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 500;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    transition: background-color 0.25s ease;
+}
+
+.navigation a:hover {
+    background-color: #632b91;
+    color: #ffffff;
+}
+
+.navigation a.active {
+    background-color: #6c3299;
+    color: #ffffff;
+}
+
+
+/* =========================================
+   5. MAIN CONTENT
+   ========================================= */
+
+main {
+    width: min(100% - 24px, 1100px);
+    margin: 24px auto;
+}
+
+h1 {
+    margin-bottom: 8px;
+    color: #252525;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.temple-count {
+    margin: 0 0 22px;
+    color: #454545;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+
+/* =========================================
+   6. TEMPLE GALLERY
+   ========================================= */
+
+/* One centered column on small screens. */
+.temple-gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    justify-items: center;
+}
+
+
+/* =========================================
+   7. TEMPLE CARDS
+   ========================================= */
+
+.temple-card {
+    width: 100%;
+    max-width: 420px;
+    margin: 0;
+    padding: 18px 16px 16px;
+    background-color: #f3f1f5;
+    border: 1px solid #ded9e3;
+    border-radius: 4px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+    text-align: center;
+}
+
+/* Temple name. */
+.temple-card h2 {
+    margin: 0 0 10px;
+    color: #252525;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* Temple information. */
+.temple-card p {
+    margin: 4px 0;
+    color: #252525;
+    font-size: 0.88rem;
+}
+
+/* Highlight information labels. */
+.temple-card .label {
+    color: #3b0866;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Temple photograph. */
+.temple-card img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    margin-top: 16px;
+    object-fit: cover;
+    border-radius: 3px;
+    background-color: #eeeeee;
+}
+
+/* Subtle image hover effect. */
+.temple-card img:hover {
+    opacity: 0.92;
+    transition: opacity 0.2s ease;
+}
+
+
+/* =========================================
+   8. FOOTER
+   ========================================= */
+
+footer {
+    margin-top: 30px;
+    padding: 16px 10px;
+    background-color: #3b0866;
+    color: #ffffff;
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+footer p {
+    margin: 3px 0;
+    overflow-wrap: anywhere;
+}
+
+.footer-separator {
+    padding: 0 5px;
+}
+
+#lastModified {
+    color: #f3dcff;
+    font-size: 0.75rem;
+}
+
+
+/* =========================================
+   9. ACCESSIBILITY
+   ========================================= */
+
+a:focus-visible {
+    outline: 2px solid #d7a9ff;
+    outline-offset: 3px;
+}
+
+/* Respect visitors who prefer reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
