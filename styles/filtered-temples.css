@@ -252,10 +252,14 @@ a:focus-visible {
 
 /* Respect visitors who prefer reduced motion. */
 @media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-        scroll-behavior: auto !important;
-        transition-duration: 0.01ms !important;
+
+    /* Remove navigation link transitions. */
+    .navigation a {
+        transition: none;
+    }
+
+    /* Remove image hover transitions. */
+    .temple-card img:hover {
+        transition: none;
     }
 }
