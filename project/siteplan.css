@@ -1,0 +1,688 @@
+
+/* =========================================
+   DISCOVER NIGERIA - WEBSITE PLAN
+   W05 Project - WDD 131
+   ========================================= */
+
+
+/* 1. GLOBAL VARIABLES
+   These variables store the selected website colors and fonts.
+   They make it easier to maintain a consistent design. */
+
+:root {
+    /* Main green color for the header, headings and footer. */
+    --primary-color: #14532D;
+
+    /* Cream color for the main page background. */
+    --background-color: #F8F6EF;
+
+    /* Gold color for accents, buttons, borders and highlights. */
+    --accent-color: #A85D18;
+
+    /* Dark green color for readable paragraph text. */
+    --text-color: #243024;
+
+    /* White color for cards and contrasting text areas. */
+    --white-color: #FFFFFF;
+
+    /* Font used for headings and prominent titles. */
+    --heading-font: "Poppins", sans-serif;
+
+    /* Font used for paragraphs and general content. */
+    --body-font: "Open Sans", sans-serif;
+}
+
+
+/* 2. GENERAL PAGE STYLING
+   Applies consistent settings to the entire document. */
+
+* {
+    /* Includes padding and borders within an element's total width. */
+    box-sizing: border-box;
+}
+
+body {
+    /* Removes the browser's default outer spacing. */
+    margin: 0;
+
+    /* Uses the selected cream background color. */
+    background-color: var(--background-color);
+
+    /* Uses the selected dark green text color. */
+    color: var(--text-color);
+
+    /* Applies Open Sans to general page content. */
+    font-family: var(--body-font);
+
+    /* Sets a comfortable reading size. */
+    font-size: 16px;
+
+    /* Improves readability by increasing line spacing. */
+    line-height: 1.7;
+}
+
+
+/* 3. HEADER STYLING
+   Creates the main branding area at the top of the document. */
+
+.site-header {
+    /* Applies the selected primary green color. */
+    background-color: var(--primary-color);
+
+    /* Makes the header text white for strong contrast. */
+    color: var(--white-color);
+
+    /* Adds comfortable spacing around the header content. */
+    padding: 25px 30px;
+}
+
+.header-content {
+    /* Uses flexbox to position the logo beside the site title. */
+    display: flex;
+
+    /* Vertically aligns the logo and branding content. */
+    align-items: center;
+
+    /* Creates space between the logo and website title. */
+    gap: 18px;
+
+    /* Centers the header content. */
+    max-width: 1000px;
+
+    /* Centers the header container horizontally. */
+    margin: 0 auto;
+}
+
+.logo {
+    /* Creates a circular logo container. */
+    width: 65px;
+
+    /* Sets the logo height to match its width. */
+    height: 65px;
+
+    /* Uses a cream background for the logo. */
+    background-color: var(--background-color);
+
+    /* Makes the logo circular. */
+    border-radius: 50%;
+
+    /* Centers the logo initials horizontally and vertically. */
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    /* Uses the primary green for the logo initials. */
+    color: var(--primary-color);
+
+    /* Applies the heading font to the logo. */
+    font-family: var(--heading-font);
+
+    /* Makes the logo initials bold. */
+    font-weight: 700;
+
+    /* Increases the size of the logo initials. */
+    font-size: 23px;
+
+    /* Prevents the logo from shrinking in the flex layout. */
+    flex-shrink: 0;
+}
+
+.site-branding h1 {
+    /* Removes unnecessary default heading spacing. */
+    margin: 0;
+
+    /* Applies Poppins to the main website title. */
+    font-family: var(--heading-font);
+
+    /* Sets a suitable title size. */
+    font-size: 2rem;
+
+    /* Makes the website title bold. */
+    font-weight: 700;
+
+    /* Uses a comfortable line height. */
+    line-height: 1.3;
+}
+
+.document-label {
+    /* Removes unnecessary paragraph spacing. */
+    margin: 0;
+
+    /* Makes the document label smaller than the website title. */
+    font-size: 0.75rem;
+
+    /* Adds spacing between the letters. */
+    letter-spacing: 2px;
+
+    /* Uses a slightly transparent white appearance. */
+    color: #E8EDE8;
+}
+
+.tagline {
+    /* Removes unnecessary default paragraph spacing. */
+    margin: 4px 0 0;
+
+    /* Uses a smaller font for the tagline. */
+    font-size: 0.9rem;
+
+    /* Uses a light text color. */
+    color: #E8EDE8;
+}
+
+
+/* 4. MAIN DOCUMENT CONTAINER
+   Controls the width and appearance of the planning document. */
+
+.site-plan {
+    /* Restricts the document to a comfortable reading width. */
+    max-width: 950px;
+
+    /* Centers the document on the page. */
+    margin: 30px auto;
+
+    /* Adds space inside the document. */
+    padding: 35px;
+
+    /* Uses the selected cream background. */
+    background-color: var(--background-color);
+
+    /* Adds a subtle border around the document. */
+    border: 1px solid #D8D2C5;
+
+    /* Adds a soft shadow for visual separation. */
+    box-shadow: 0 3px 12px rgba(36, 48, 36, 0.08);
+}
+
+
+/* 5. SECTION STYLING
+   Gives each required planning section a consistent appearance. */
+
+.site-plan section {
+    /* Adds spacing below each section. */
+    margin-bottom: 35px;
+}
+
+.site-plan section:last-child {
+    /* Removes unnecessary spacing after the final section. */
+    margin-bottom: 0;
+}
+
+.site-plan h2 {
+    /* Uses Poppins for section headings. */
+    font-family: var(--heading-font);
+
+    /* Uses the primary green color for headings. */
+    color: var(--primary-color);
+
+    /* Sets the section heading size. */
+    font-size: 1.45rem;
+
+    /* Adds space below each heading. */
+    margin: 0 0 15px;
+
+    /* Adds a decorative gold underline. */
+    border-bottom: 3px solid var(--accent-color);
+
+    /* Makes the underline fit the heading text. */
+    display: table;
+
+    /* Adds space between the heading and underline. */
+    padding-bottom: 5px;
+}
+
+.site-plan h3 {
+    /* Uses Poppins for smaller headings. */
+    font-family: var(--heading-font);
+
+    /* Uses the primary green color. */
+    color: var(--primary-color);
+
+    /* Sets a suitable smaller heading size. */
+    font-size: 1.1rem;
+
+    /* Adds space above and below the heading. */
+    margin: 12px 0 8px;
+}
+
+.site-plan p {
+    /* Adds comfortable spacing below paragraphs. */
+    margin: 0 0 12px;
+
+    /* Uses the selected body text color. */
+    color: var(--text-color);
+}
+
+.site-plan ul {
+    /* Adds indentation to the scenarios list. */
+    padding-left: 25px;
+
+    /* Adds space above and below the list. */
+    margin: 10px 0;
+}
+
+.site-plan li {
+    /* Adds space between individual scenario questions. */
+    margin-bottom: 9px;
+}
+
+.site-plan strong {
+    /* Makes important labels stand out. */
+    color: var(--primary-color);
+}
+
+.site-plan code {
+    /* Gives the proposed domain a subtle highlighted background. */
+    background-color: #E8EDE8;
+
+    /* Adds internal spacing around the domain. */
+    padding: 3px 7px;
+
+    /* Rounds the domain background corners. */
+    border-radius: 4px;
+
+    /* Uses the primary green for the domain text. */
+    color: var(--primary-color);
+}
+
+
+/* 6. COLOR PALETTE
+   Displays the selected website colors and their uses. */
+
+.color-palette {
+    /* Uses CSS Grid to arrange the color cards. */
+    display: grid;
+
+    /* Creates responsive columns that adjust to available space. */
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+
+    /* Creates space between the color cards. */
+    gap: 15px;
+
+    /* Adds space above the color palette. */
+    margin-top: 20px;
+}
+
+.color-card {
+    /* Gives each color card a white background. */
+    background-color: var(--white-color);
+
+    /* Adds a subtle border around each card. */
+    border: 1px solid #D8D2C5;
+
+    /* Rounds the corners of the cards. */
+    border-radius: 7px;
+
+    /* Hides any content that extends beyond rounded corners. */
+    overflow: hidden;
+
+    /* Adds space below the color card. */
+    padding-bottom: 10px;
+}
+
+.color-box {
+    /* Gives every color sample a consistent height. */
+    height: 55px;
+
+    /* Makes each color sample fill the available width. */
+    width: 100%;
+}
+
+.forest-green {
+    /* Displays the primary green color sample. */
+    background-color: #14532D;
+}
+
+.warm-cream {
+    /* Displays the cream color sample. */
+    background-color: #F8F6EF;
+
+    /* Adds a border so the light sample remains visible. */
+    border-bottom: 1px solid #D8D2C5;
+}
+
+.cultural-gold {
+    /* Displays the gold accent color sample. */
+    background-color: #A85D18;
+}
+
+.charcoal-green {
+    /* Displays the dark green text color sample. */
+    background-color: #243024;
+}
+
+.color-card h3 {
+    /* Reduces the heading size inside color cards. */
+    font-size: 0.95rem;
+
+    /* Adds space around the heading. */
+    margin: 10px 10px 3px;
+}
+
+.color-card p {
+    /* Reduces the text size inside color cards. */
+    font-size: 0.8rem;
+
+    /* Adds horizontal spacing around the descriptions. */
+    margin: 3px 10px;
+
+    /* Improves readability of the descriptions. */
+    line-height: 1.5;
+}
+
+
+/* 7. TYPOGRAPHY EXAMPLES
+   Demonstrates the two fonts selected for the website. */
+
+.font-example {
+    /* Adds space inside each font example. */
+    padding: 15px;
+
+    /* Adds space between font examples. */
+    margin-bottom: 15px;
+
+    /* Gives the font examples a white background. */
+    background-color: var(--white-color);
+
+    /* Adds a subtle border. */
+    border-left: 4px solid var(--accent-color);
+
+    /* Rounds the right-hand corners. */
+    border-radius: 0 6px 6px 0;
+}
+
+.poppins-example {
+    /* Demonstrates Poppins as the heading font. */
+    font-family: var(--heading-font);
+
+    /* Increases the font example size. */
+    font-size: 1.4rem;
+
+    /* Uses the primary green color. */
+    color: var(--primary-color);
+}
+
+.opensans-example {
+    /* Demonstrates Open Sans as the body font. */
+    font-family: var(--body-font);
+
+    /* Increases the font example size. */
+    font-size: 1.4rem;
+
+    /* Uses the accent color for distinction. */
+    color: var(--accent-color);
+}
+
+
+/* 8. WIREFRAME CONTAINER
+   Organizes the mobile and desktop wireframes. */
+
+.wireframe-container {
+    /* Creates a two-column layout for wider screens. */
+    display: grid;
+
+    /* Gives both wireframes equal space. */
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    /* Adds space between the wireframe examples. */
+    gap: 25px;
+
+    /* Adds space above the wireframes. */
+    margin-top: 20px;
+}
+
+.wireframe {
+    /* Gives each wireframe a white background. */
+    background-color: var(--white-color);
+
+    /* Adds a border around each wireframe. */
+    border: 1px solid #D8D2C5;
+
+    /* Rounds the wireframe container corners. */
+    border-radius: 8px;
+
+    /* Adds space inside each wireframe. */
+    padding: 15px;
+
+    /* Prevents grid content from overflowing its column. */
+    min-width: 0;
+}
+
+.wireframe h3 {
+    /* Centers the mobile and desktop labels. */
+    text-align: center;
+
+    /* Adds space below the labels. */
+    margin-bottom: 15px;
+}
+
+
+/* 9. WIREFRAME COMPONENTS
+   Styles the different sections represented in the sketches. */
+
+.wf-header {
+    /* Uses the primary green for the wireframe header. */
+    background-color: var(--primary-color);
+
+    /* Uses white text for contrast. */
+    color: var(--white-color);
+
+    /* Centers the wireframe header text. */
+    text-align: center;
+
+    /* Adds space inside the header. */
+    padding: 15px 8px;
+
+    /* Adds space below the header. */
+    margin-bottom: 10px;
+
+    /* Makes the header text slightly smaller. */
+    font-size: 0.85rem;
+
+    /* Makes the header text bold. */
+    font-weight: 600;
+}
+
+.wf-hero {
+    /* Uses a light green background to represent the hero area. */
+    background-color: #E8EDE8;
+
+    /* Uses the primary green for the hero text. */
+    color: var(--primary-color);
+
+    /* Centers the hero content. */
+    text-align: center;
+
+    /* Adds space inside the hero section. */
+    padding: 30px 10px;
+
+    /* Adds space below the hero section. */
+    margin-bottom: 10px;
+
+    /* Adds a dashed outline to identify the placeholder area. */
+    border: 2px dashed var(--primary-color);
+
+    /* Sets the hero text size. */
+    font-size: 0.85rem;
+}
+
+.wf-content {
+    /* Uses a soft cream background for content placeholders. */
+    background-color: #F8F6EF;
+
+    /* Adds a border around the content area. */
+    border: 1px solid #D8D2C5;
+
+    /* Adds internal spacing. */
+    padding: 18px 10px;
+
+    /* Adds space between content sections. */
+    margin-bottom: 10px;
+
+    /* Centers the placeholder text. */
+    text-align: center;
+
+    /* Sets the placeholder text size. */
+    font-size: 0.85rem;
+}
+
+.wf-grid {
+    /* Uses Grid to arrange the desktop content cards. */
+    display: grid;
+
+    /* Creates three equal columns. */
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    /* Adds space between the cards. */
+    gap: 10px;
+
+    /* Adds space below the card grid. */
+    margin-bottom: 10px;
+}
+
+.wf-card {
+    /* Uses a light green background for the cards. */
+    background-color: #E8EDE8;
+
+    /* Adds a border to each card. */
+    border: 1px solid #D8D2C5;
+
+    /* Adds space inside each card. */
+    padding: 20px 5px;
+
+    /* Centers the placeholder text. */
+    text-align: center;
+
+    /* Sets a smaller text size for the cards. */
+    font-size: 0.8rem;
+}
+
+.wf-footer {
+    /* Uses the primary green for the footer placeholder. */
+    background-color: var(--primary-color);
+
+    /* Uses white text for contrast. */
+    color: var(--white-color);
+
+    /* Centers the footer placeholder text. */
+    text-align: center;
+
+    /* Adds space inside the footer. */
+    padding: 20px 10px;
+
+    /* Sets the footer text size. */
+    font-size: 0.8rem;
+}
+
+
+/* 10. FOOTER STYLING
+   Creates the final section of the planning document. */
+
+.site-footer {
+    /* Uses the primary green as the footer background. */
+    background-color: var(--primary-color);
+
+    /* Uses white text for readability. */
+    color: var(--white-color);
+
+    /* Centers the footer content. */
+    text-align: center;
+
+    /* Adds internal spacing. */
+    padding: 22px 15px;
+
+    /* Sets the footer text size. */
+    font-size: 0.85rem;
+}
+
+.site-footer p {
+    /* Removes unnecessary paragraph spacing. */
+    margin: 5px 0;
+
+    /* Uses a light text color. */
+    color: #FFFFFF;
+}
+
+
+/* 11. TABLET AND MOBILE RESPONSIVENESS
+   Adjusts the layout for smaller screens. */
+
+@media screen and (max-width: 700px) {
+
+    /* Reduces the header spacing on smaller screens. */
+    .site-header {
+        padding: 20px 15px;
+    }
+
+    /* Reduces the website title size on smaller screens. */
+    .site-branding h1 {
+        font-size: 1.45rem;
+    }
+
+    /* Reduces the logo dimensions on smaller screens. */
+    .logo {
+        width: 52px;
+        height: 52px;
+        font-size: 19px;
+    }
+
+    /* Reduces the main document margins and padding. */
+    .site-plan {
+        margin: 15px;
+        padding: 20px;
+    }
+
+    /* Changes the wireframes from two columns to one column. */
+    .wireframe-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* Makes the wireframe cards fit smaller screens. */
+    .wf-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    /* Reduces the font size of the section headings. */
+    .site-plan h2 {
+        font-size: 1.25rem;
+    }
+}
+
+
+/* 12. EXTRA SMALL MOBILE SCREENS
+   Provides additional adjustments for narrow devices. */
+
+@media screen and (max-width: 400px) {
+
+    /* Reduces the header gap on very small screens. */
+    .header-content {
+        gap: 10px;
+    }
+
+    /* Makes the website title smaller on narrow screens. */
+    .site-branding h1 {
+        font-size: 1.2rem;
+    }
+
+    /* Makes the document label smaller on narrow screens. */
+    .document-label {
+        font-size: 0.6rem;
+        letter-spacing: 1px;
+    }
+
+    /* Reduces the main content padding. */
+    .site-plan {
+        padding: 15px;
+    }
+
+    /* Reduces the spacing between wireframe cards. */
+    .wf-grid {
+        gap: 5px;
+    }
+
+    /* Reduces the font size inside wireframe cards. */
+    .wf-card {
+        font-size: 0.7rem;
+    }
+}
