@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Defines the character encoding for the document. -->
+    <meta charset="UTF-8">
+
+    <!-- Makes the page responsive on mobile devices. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Provides a short description of the confirmation page. -->
+    <meta name="description" content="Confirmation page for submitted product reviews.">
+
+    <!-- Sets the title displayed in the browser tab. -->
+    <title>Review Confirmation | Product Review Form</title>
+
+    <!-- Connects this page to the existing Product Review CSS file. -->
+    <link rel="stylesheet" href="styles/form.css">
+
+    <!-- Loads the confirmation page JavaScript after the HTML is parsed. -->
+    <script src="scripts/review.js" defer></script>
+</head>
+
+<body>
+    <!-- Provides the main heading for the confirmation page. -->
+    <header>
+        <h1>Product Review Confirmation</h1>
+    </header>
+
+    <!-- Contains the main confirmation content. -->
+    <main>
+        <!-- Groups the thank-you message and review counter together. -->
+        <section class="confirmation-card">
+
+            <!-- Displays a success symbol to reassure the user. -->
+            <p class="success-icon" aria-hidden="true">✓</p>
+
+            <!-- Welcomes the user after a successful submission. -->
+            <h2>Thank You for Your Review!</h2>
+
+            <!-- Confirms that the submitted review was received. -->
+            <p id="confirmationMessage" aria-live="polite">
+                Your product review has been successfully submitted.
+            </p>
+
+            <!-- Displays the total number of reviews completed. -->
+            <p class="review-total">
+                Total Reviews Completed:
+                <strong id="reviewCount">0</strong>
+            </p>
+
+            <!-- Provides a link back to the original review form. -->
+            <a href="form.html" class="return-link">
+                Submit Another Review
+            </a>
+
+        </section>
+    </main>
+
+    <!-- Contains the common footer used on your assignments. -->
+    <footer>
+
+        <!-- Displays the copyright year, name, and country. -->
+        <p>
+            &copy;<span id="currentyear"></span>
+            James Rex Ovie
+            <span class="footer-separator">|</span>
+            Nigeria
+        </p>
+
+        <!-- JavaScript inserts the document's last-modified date here. -->
+        <p id="lastModified"></p>
+
+    </footer>
+</body>
+</html>
